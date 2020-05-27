@@ -153,6 +153,14 @@ webSocket.on("open", () => {
       }
       fs.writeFileSync(fileMapFilePath, JSON.stringify(fileMap, null, 2));
       await bundler.bundle();
+      console.log(
+        JSON.stringify({
+          fileMap: fileMap,
+          fileName: name,
+          fileSerialied: serialized,
+          apiKey: process.env.API_KEY, // DO NOT LEAK API KEY
+        })
+      );
       webSocket.send(
         JSON.stringify({
           fileMap: fileMap,

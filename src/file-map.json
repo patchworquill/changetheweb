@@ -1,7 +1,7 @@
 {
   "index.html": {
     "extension": "html",
-    "digest": "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
+    "digest": "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
     "history": [
       "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
       "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
@@ -14,19 +14,22 @@
       "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
       "4a88a5ee7b0c426c37f675582f4cebb0f7be27df94d1838fe83c480a832cf287",
       "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
-      "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2"
+      "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
+      "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
+      "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
+      "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7"
     ],
-    "timestamp": "1590554277655",
-    "counter": 11,
+    "timestamp": "1590596092293",
+    "counter": 14,
     "patch": {
       "17": {
         "type": 1,
         "vNode": {
-          "text": "Hello Worlds",
+          "text": "Hello World",
           "#type": "VirtualText"
         },
         "patch": {
-          "text": "Hello World",
+          "text": "Hello Worlds",
           "#type": "VirtualText"
         },
         "#type": "VirtualPatch"
@@ -35,7 +38,7 @@
   },
   "server.js": {
     "extension": "js",
-    "digest": "71426166888052508cdc4d0709a7c7592a6870fbfd27b3f3383fe274f97fd389",
+    "digest": "c6c9822dc4587aeb6c5388b98eed9901db6148a5e6ada20156ad1b6f98b4d652",
     "history": [
       "6a61747639bdb80fce80cbdbcc909b4521e3e373c2601686a5be18c6851aed47",
       "73ea2627a337ca80324b922b32ec89e1868197e8160ae7b6d8cbf558d195eaa4",
@@ -66,9 +69,11 @@
       "71426166888052508cdc4d0709a7c7592a6870fbfd27b3f3383fe274f97fd389",
       "942e2854656444262a4ae31e64a80633a5edd97114461811ed8134228ffb34d6",
       "e5143666895d7fa4dc59d933d5b4cd18bfe9393c6bbd1c91db3f6472454bf00c",
-      "71426166888052508cdc4d0709a7c7592a6870fbfd27b3f3383fe274f97fd389"
+      "71426166888052508cdc4d0709a7c7592a6870fbfd27b3f3383fe274f97fd389",
+      "524500be090967f42231361bc3886953d5bfe1ddc65e037e1d4e36b66917022d",
+      "c6c9822dc4587aeb6c5388b98eed9901db6148a5e6ada20156ad1b6f98b4d652"
     ],
-    "timestamp": "1590554229258",
-    "counter": 29
+    "timestamp": "1590596399140",
+    "counter": 31
   }
 }

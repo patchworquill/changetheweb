@@ -46,6 +46,7 @@ webSocketServer.on("connection", (webSocket) => {
   });
   webSocket.on("message", (message) => {
     const data = JSON.parse(message);
+    console.log(data);
     // If message is from the watcher
     if (data.apiKey === watcherAPIKey) {
       // Broadcast to everyone else
