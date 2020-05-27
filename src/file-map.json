@@ -1,1 +1,37 @@
-{}
+{
+  "index.html": {
+    "extension": "html",
+    "digest": "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
+    "history": [
+      "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
+      "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
+      "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2"
+    ],
+    "timestamp": "1590553626023",
+    "counter": 2,
+    "patch": {
+      "17": {
+        "type": 1,
+        "vNode": {
+          "text": "Hello Worlds",
+          "#type": "VirtualText"
+        },
+        "patch": {
+          "text": "Hello World",
+          "#type": "VirtualText"
+        },
+        "#type": "VirtualPatch"
+      }
+    }
+  },
+  "server.js": {
+    "extension": "js",
+    "digest": "73ea2627a337ca80324b922b32ec89e1868197e8160ae7b6d8cbf558d195eaa4",
+    "history": [
+      "6a61747639bdb80fce80cbdbcc909b4521e3e373c2601686a5be18c6851aed47",
+      "73ea2627a337ca80324b922b32ec89e1868197e8160ae7b6d8cbf558d195eaa4"
+    ],
+    "timestamp": "1590553717027",
+    "counter": 1
+  }
+}
