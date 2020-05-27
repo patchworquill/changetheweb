@@ -12,7 +12,6 @@ const vDOMPatchSerializer = require("@zharktas/vdom-serialize");
 // Bundler, WebSocket
 const Bundler = require("parcel-bundler");
 const WebSocket = require("ws");
-const { url } = require("./common");
 
 /**
  *
@@ -67,7 +66,7 @@ const bundlerOptions = {
 };
 const bundler = new Bundler(entryFilePath, bundlerOptions);
 
-const webSocket = new WebSocket(url, {
+const webSocket = new WebSocket("ws://changetheweb.xyz", {
   perMessageDeflate: false,
 });
 webSocket.on("message", (data) => {
