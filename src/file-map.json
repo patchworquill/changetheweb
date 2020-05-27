@@ -1,7 +1,7 @@
 {
   "index.html": {
     "extension": "html",
-    "digest": "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
+    "digest": "35ae1cf46f5a52fff9dd8fe9afa08be8a50e497986984bb190973b36a1969952",
     "history": [
       "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
       "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
@@ -17,19 +17,20 @@
       "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
       "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
       "289dd68b0e0fc5ee77e734965f47f19e0d9c51a6a128e21ae0cfb98bcf82d8d2",
-      "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7"
+      "a684b2dd93ec96cf70ef4d3c9d8f4755eeba7bb44ac184b0aed55333320d75a7",
+      "35ae1cf46f5a52fff9dd8fe9afa08be8a50e497986984bb190973b36a1969952"
     ],
-    "timestamp": "1590596092293",
-    "counter": 14,
+    "timestamp": "1590596480765",
+    "counter": 15,
     "patch": {
       "17": {
         "type": 1,
         "vNode": {
-          "text": "Hello World",
+          "text": "Hello Worlds",
           "#type": "VirtualText"
         },
         "patch": {
-          "text": "Hello Worlds",
+          "text": "Hello Worlds ",
           "#type": "VirtualText"
         },
         "#type": "VirtualPatch"
@@ -71,9 +72,22 @@
       "e5143666895d7fa4dc59d933d5b4cd18bfe9393c6bbd1c91db3f6472454bf00c",
       "71426166888052508cdc4d0709a7c7592a6870fbfd27b3f3383fe274f97fd389",
       "524500be090967f42231361bc3886953d5bfe1ddc65e037e1d4e36b66917022d",
+      "c6c9822dc4587aeb6c5388b98eed9901db6148a5e6ada20156ad1b6f98b4d652",
+      "a356cd801aad4de53cc00e58bb3ceaea873b79c28c5abfedf13f3b927a0b00a0",
+      "c6c9822dc4587aeb6c5388b98eed9901db6148a5e6ada20156ad1b6f98b4d652",
+      "a356cd801aad4de53cc00e58bb3ceaea873b79c28c5abfedf13f3b927a0b00a0",
       "c6c9822dc4587aeb6c5388b98eed9901db6148a5e6ada20156ad1b6f98b4d652"
     ],
-    "timestamp": "1590596399140",
-    "counter": 31
+    "timestamp": "1590596538288",
+    "counter": 35
+  },
+  "watcher.js": {
+    "extension": "js",
+    "digest": "6a240c9354b802652d3968cb30a76160b5c050f9813ba7d2813c8755928e54a9",
+    "history": [
+      "6a240c9354b802652d3968cb30a76160b5c050f9813ba7d2813c8755928e54a9"
+    ],
+    "timestamp": "1590596554527",
+    "counter": 0
   }
 }

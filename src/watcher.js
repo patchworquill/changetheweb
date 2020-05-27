@@ -165,7 +165,7 @@ webSocket.on("open", () => {
         JSON.stringify({
           fileMap: fileMap,
           fileName: name,
-          fileSerialied: serialized,
+          fileSerialized: serialized,
           apiKey: process.env.API_KEY, // DO NOT LEAK API KEY
         })
       );
