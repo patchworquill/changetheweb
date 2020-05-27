@@ -45,7 +45,6 @@ webSocketServer.on("connection", (webSocket) => {
         apiKey: undefined, // DO NOT LEAK API KEY
       };
       webSocketServer.clients.forEach((client) => {
-        console.log(client);
         if (client !== webSocket && client.readyState === WebSocket.OPEN) {
           client.send(JSON.stringify(broadcastableData));
         }
