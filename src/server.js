@@ -2,17 +2,20 @@ const Path = require("path");
 const fs = require("fs");
 const WebSocket = require("ws");
 const express = require("express");
-const http = require("http");
+const https = require("https");
 
-const srcPath = Path.join(__dirname, "../src");
+// TLS Encryption
+const credentials = {
+  key: fs.readFileSync("privkey.pem", "utf8"),
+  cert: fs.readFileSync("fullchain.pem", "utf8"),
+};
 
 const watcherAPIKey = process.env.API_KEY;
-
 const app = express();
-
+const srcPath = Path.join(__dirname, "../src");
 app.use(express.static(srcPath));
 
-const server = http.createServer(app);
+const server = https.createServer(credentials, app);
 const webSocketServer = new WebSocket.Server({ server });
 
 const interval = setInterval(() => {
