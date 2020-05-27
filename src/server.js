@@ -6,8 +6,14 @@ const https = require("https");
 
 // TLS Encryption
 const credentials = {
-  key: fs.readFileSync(Path.join(__dirname, "../privkey.pem"), "utf8"),
-  cert: fs.readFileSync(Path.join(__dirname, "../fullchain.pem"), "utf8"),
+  key: fs.readFileSync(
+    "/etc/letsencrypt/keys/changetheweb.xyz/privkey.pem",
+    "utf8"
+  ),
+  cert: fs.readFileSync(
+    "/etc/letsencrypt/keys/changetheweb.xyz/fullchain.pem",
+    "utf8"
+  ),
 };
 
 const watcherAPIKey = process.env.API_KEY;
