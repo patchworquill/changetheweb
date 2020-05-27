@@ -7,11 +7,11 @@ const https = require("https");
 // TLS Encryption
 const credentials = {
   key: fs.readFileSync(
-    "/etc/letsencrypt/keys/changetheweb.xyz/privkey.pem",
+    "/etc/letsencrypt/live/changetheweb.xyz/privkey.pem",
     "utf8"
   ),
   cert: fs.readFileSync(
-    "/etc/letsencrypt/keys/changetheweb.xyz/fullchain.pem",
+    "/etc/letsencrypt/live/changetheweb.xyz/fullchain.pem",
     "utf8"
   ),
 };
