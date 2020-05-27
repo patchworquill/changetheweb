@@ -66,6 +66,6 @@ webSocketServer.on("connection", (webSocket) => {
 });
 
 //start our server
-server.listen(433, () => {
+server.listen(443, () => {
   console.log(`server started on port ${server.address().port}`);
 });
