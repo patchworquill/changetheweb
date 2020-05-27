@@ -9,6 +9,9 @@ const srcPath = Path.join(__dirname, "../src");
 const watcherAPIKey = process.env.API_KEY;
 
 const app = express();
+
+app.use(express.static(srcPath));
+
 const server = http.createServer(app);
 const webSocketServer = new WebSocket.Server({ server });
 
