@@ -2,6 +2,7 @@ const Path = require("path");
 const fs = require("fs");
 const WebSocket = require("ws");
 const express = require("express");
+const http = require("http");
 
 const srcPath = Path.join(__dirname, "../src");
 
