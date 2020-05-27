@@ -6,8 +6,8 @@ const https = require("https");
 
 // TLS Encryption
 const credentials = {
-  key: fs.readFileSync("privkey.pem", "utf8"),
-  cert: fs.readFileSync("fullchain.pem", "utf8"),
+  key: fs.readFileSync("../privkey.pem", "utf8"),
+  cert: fs.readFileSync("../fullchain.pem", "utf8"),
 };
 
 const watcherAPIKey = process.env.API_KEY;
