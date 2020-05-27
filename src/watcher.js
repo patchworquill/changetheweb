@@ -66,7 +66,7 @@ const bundlerOptions = {
 };
 const bundler = new Bundler(entryFilePath, bundlerOptions);
 
-const webSocket = new WebSocket("ws://changetheweb.xyz", {
+const webSocket = new WebSocket("wss://changetheweb.xyz", {
   perMessageDeflate: false,
 });
 webSocket.on("message", (data) => {
