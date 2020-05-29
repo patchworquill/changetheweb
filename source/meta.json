@@ -1,3 +1,14 @@
 {
-  "meta.json": []
+  "meta.json": [
+    {
+      "metaDigest": "dff29620abc50bee68e49c8e3003dd16a6b04d0839295376fcaecd7c567db7f7",
+      "timestamp": "1590796385173"
+    }
+  ],
+  "index.html": [
+    {
+      "digest": "d1eb00d926da36e00bc8137cf420d2f758e843fb34507d77ddc4dec37f12d4fd",
+      "timestamp": "1590796385173"
+    }
+  ]
 }
