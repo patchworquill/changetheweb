@@ -18,7 +18,7 @@ const credentials = {
 const secretSerialized = process.env.SECRET;
 // If the secret is not here, then the program should stop running immediately
 if (!secretSerialized) throw new Error("secret missing");
-const secret = Buffer.from(secretSerializeds, "binary");
+const secret = Buffer.from(secretSerialized, "binary");
 
 // Names of folder and file locations on my personal computer
 const sourcePath = "/home/dragos/changetheweb/source/";
