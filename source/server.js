@@ -1,4 +1,5 @@
 const fs = require("fs");
+const crypto = require("crypto");
 const WebSocket = require("ws");
 const express = require("express");
 const https = require("https");
