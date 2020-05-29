@@ -239,7 +239,11 @@ fs.watch(sourcePath, async (event, name) => {
   if (meta[name] === undefined) meta[name] = [];
 
   // If the digest didn't change ignore it.
-  if (meta[name][meta[name].length - 1].digest === digest) return;
+  if (
+    meta[name][meta[name].length - 1] &&
+    meta[name][meta[name].length - 1].digest === digest
+  )
+    return;
 
   // Add the change to the meta
   meta[name].push({
