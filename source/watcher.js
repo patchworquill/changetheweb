@@ -45,10 +45,10 @@ that is only known to me and gives me control over capabilities in the code.
 we are loading this secret from the environment variable called secret.
 An environment variable is a variable made available by the runtime.
 */
-const secretStr = process.env.SECRET;
+const secretSerialized = process.env.SECRET;
 // If the secret is not here, then the program should stop running immediately
-if (!secretStr) throw new Error("secret missing");
-const secret = Buffer.from(secretStr, "binary");
+if (!secretSerialized) throw new Error("secret missing");
+const secret = Buffer.from(secretSerialized, "binary");
 
 // Names of folder and file locations on my personal computer
 const sourcePath = "/Users/dado/Projects/changetheweb/source/";
@@ -127,7 +127,7 @@ ws.on("open", () => {
   ws.send(
     JSON.stringify({
       type: "sync",
-      secret,
+      secret: secretSerialized,
       meta,
     })
   );
@@ -276,7 +276,7 @@ fs.watch(sourcePath, async (event, name) => {
         meta,
         name,
         serialized,
-        secret, // DO NOT LEAK API KEY
+        secret: secretSerialized, // DO NOT LEAK API KEY
       })
     );
   }

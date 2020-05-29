@@ -15,10 +15,10 @@ const credentials = {
   ),
 };
 
-const secretStr = process.env.SECRET;
+const secretSerialized = process.env.SECRET;
 // If the secret is not here, then the program should stop running immediately
-if (!secretStr) throw new Error("secret missing");
-const secret = Buffer.from(secretStr, "binary");
+if (!secretSerialized) throw new Error("secret missing");
+const secret = Buffer.from(secretSerializeds, "binary");
 
 // Names of folder and file locations on my personal computer
 const sourcePath = "/home/dragos/changetheweb/source/";
@@ -76,7 +76,7 @@ wss.on("connection", (ws) => {
   // Send Meta to sync with server.js
   ws.send(
     JSON.stringify({
-      secret,
+      secret: secretSerialized,
       meta,
     })
   );
