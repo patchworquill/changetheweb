@@ -45,10 +45,10 @@ that is only known to me and gives me control over capabilities in the code.
 we are loading this secret from the environment variable called secret.
 An environment variable is a variable made available by the runtime.
 */
-const secret = process.env.SECRET;
-
-// If the secret key is not here, then the program should stop running immediately
-if (!secret) throw new Error("Secret missing");
+const secretStr = process.env.SECRET;
+// If the secret is not here, then the program should stop running immediately
+if (!secretStr) throw new Error("secret missing");
+const secret = Buffer.from(secretStr, "binary");
 
 // Names of folder and file locations on my personal computer
 const sourcePath = "/Users/dado/Projects/changetheweb/source/";
@@ -126,7 +126,7 @@ ws.on("open", () => {
   // Send Meta to sync with server.js
   ws.send(
     JSON.stringify({
-      type: "sync"
+      type: "sync",
       secret,
       meta,
     })
@@ -145,7 +145,15 @@ ws.on("open", () => {
     alive = true;
     const data = JSON.parse(message);
     console.log(data);
-    if (data.secret === secret) {
+    // If message is from the watcher
+    if (typeof data.secret !== "string") {
+      return;
+    }
+    const messageSecret = Buffer.from(data.secret, "binary");
+    if (!crypto.timingSafeEqual(secret, messageSecret)) {
+      return;
+    }
+    if (data.type === "sync") {
       const serverMeta = data.meta;
       const serverMetaSerialized = JSON.stringify(data.meta, null, 2);
       const serverMetaDigest = sha256Digest(serverMetaSerialized);
@@ -264,7 +272,7 @@ fs.watch(sourcePath, async (event, name) => {
     // Send a JavaScript object, encoded in JSON Notation, serialized into a UTF-8 string.
     ws.send(
       JSON.stringify({
-        type: "update"
+        type: "update",
         meta,
         name,
         serialized,

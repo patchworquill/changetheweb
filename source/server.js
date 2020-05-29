@@ -15,10 +15,10 @@ const credentials = {
   ),
 };
 
-const secret = process.env.SECRET;
-
-// If the secret key is not here, then the program should stop running immediately
-if (!secret) throw new Error("API key missing");
+const secretStr = process.env.SECRET;
+// If the secret is not here, then the program should stop running immediately
+if (!secretStr) throw new Error("secret missing");
+const secret = Buffer.from(secretStr, "binary");
 
 // Names of folder and file locations on my personal computer
 const sourcePath = "/Home/dragos/changetheweb/source/";
@@ -93,7 +93,14 @@ wss.on("connection", (ws) => {
     const data = JSON.parse(message);
     console.log(data);
     // If message is from the watcher
-    if (data.secret === secret && data.type === "update") {
+    if (typeof data.secret !== "string") {
+      return;
+    }
+    const messageSecret = Buffer.from(data.secret, "binary");
+    if (!crypto.timingSafeEqual(secret, messageSecret)) {
+      return;
+    }
+    if (data.type === "update") {
       // Meta Not really needed because we can do a sync on connection and send only name + serialized + digest
       // Update Source Meta
       fs.writeFileSync(sourcePath + "meta.json", JSON.stringify(data.meta));
