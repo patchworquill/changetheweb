@@ -21,10 +21,10 @@ if (!secretStr) throw new Error("secret missing");
 const secret = Buffer.from(secretStr, "binary");
 
 // Names of folder and file locations on my personal computer
-const sourcePath = "/Home/dragos/changetheweb/source/";
-const metaPath = "/Home/dragos/changetheweb/source/meta.json";
-const informationPath = "/Home/dragos/changetheweb/information/";
-const logPath = "/Home/dragos/changetheweb/logs/server.log";
+const sourcePath = "/home/dragos/changetheweb/source/";
+const metaPath = "/home/dragos/changetheweb/source/meta.json";
+const informationPath = "/home/dragos/changetheweb/information/";
+const logPath = "/home/dragos/changetheweb/logs/server.log";
 
 /**
  *
