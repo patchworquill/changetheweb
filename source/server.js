@@ -93,7 +93,7 @@ wss.on("connection", (ws) => {
     const data = JSON.parse(message);
     console.log(data);
     // If message is from the watcher
-    if ((data.secret === secret && data.type = "update")) {
+    if (data.secret === secret && data.type === "update") {
       // Meta Not really needed because we can do a sync on connection and send only name + serialized + digest
       // Update Source Meta
       fs.writeFileSync(sourcePath + "meta.json", JSON.stringify(data.meta));
