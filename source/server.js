@@ -86,7 +86,7 @@ wss.on("connection", (ws) => {
     timeout.refresh();
     alive = true;
   });
-  ws.on("message", () => {
+  ws.on("message", (message) => {
     console.log("ws message");
     timeout.refresh();
     alive = true;

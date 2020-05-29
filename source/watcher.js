@@ -139,7 +139,7 @@ ws.on("open", () => {
     timeout.refresh();
     alive = true;
   });
-  ws.on("message", () => {
+  ws.on("message", (message) => {
     console.log("message");
     timeout.refresh();
     alive = true;
