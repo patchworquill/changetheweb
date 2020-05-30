@@ -255,7 +255,7 @@ fs.watch(sourcePath, async (event, name) => {
   metaSerialized = JSON.stringify(meta, null, 2);
   const metaDigest = sha256Digest(metaSerialized);
   meta["meta.json"].push({
-    metaDigest,
+    digest: metaDigest,
     timestamp: Date.now().toString(),
   });
   metaSerialized = JSON.stringify(meta, null, 2);

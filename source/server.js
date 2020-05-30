@@ -126,8 +126,8 @@ wss.on("connection", (ws) => {
         ...data,
         secret: undefined, // DO NOT LEAK API KEY
       };
-      webSocketServer.clients.forEach((client) => {
-        if (client !== webSocket && client.readyState === WebSocket.OPEN) {
+      wss.clients.forEach((client) => {
+        if (client !== ws && client.readyState === WebSocket.OPEN) {
           client.send(JSON.stringify(broadcastableData));
         }
       });
