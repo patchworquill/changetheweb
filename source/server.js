@@ -77,7 +77,6 @@ wss.on("connection", (ws) => {
   // Send Meta to sync with server.js
   ws.send(
     JSON.stringify({
-      secret: secretSerialized,
       meta,
     })
   );
@@ -120,15 +119,11 @@ wss.on("connection", (ws) => {
         informationPath + sha256Digest(data.serialized),
         data.serialized
       );
-      // TODO deal with
       // Broadcast to everyone else
-      const broadcastableData = {
-        ...data,
-        secret: undefined, // DO NOT LEAK API KEY
-      };
+      data.secret = undefined; // DONT LEAK SECRET
       wss.clients.forEach((client) => {
         if (client !== ws && client.readyState === WebSocket.OPEN) {
-          client.send(JSON.stringify(broadcastableData));
+          client.send(JSON.stringify(data));
         }
       });
       if (data.name === "server.js") {
